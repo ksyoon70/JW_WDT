@@ -74,7 +74,7 @@ namespace Jwis_WD
             GetCfgManager().Load();
 
             this.Text += " " + FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).FileVersion.ToString();
-#if false
+#if true
             try
             {
                 eapi = new EAPI_Library();
@@ -89,7 +89,7 @@ namespace Jwis_WD
         }
         private void InitialEAPI_Library()
         {
-#if false
+#if true
             UInt32 pMaxDelay = new UInt32(), pMaxEventTimeout = new UInt32(), pMaxResetTimeout = new UInt32();
             if (0 != EAPI_Library.EApiWDogGetCap(ref pMaxDelay, ref pMaxEventTimeout, ref pMaxResetTimeout))
             {
